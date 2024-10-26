@@ -94,7 +94,7 @@ specific game rules.
 1. **Clone the repository**:
    ```bash
    git clone git@github.com:sagar-gavhane/tambola-game.git
-   cd tambola-claim-validator
+   cd tambola-game
    ```
 2. Compile the project: Ensure you have Java installed, and compile the Java files:
 

@@ -1,5 +1,12 @@
 package com.game.tambola;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+
+@Data
+@AllArgsConstructor
+@Builder
 public class Cell {
     private final Integer value;
     private final int rowId;
@@ -11,25 +18,5 @@ public class Cell {
         this.rowId = rowId;
         this.columnId = columnId;
         this.crossed = false;
-    }
-
-    public Integer getValue() {
-        return value;
-    }
-
-    public boolean isCrossed() {
-        return crossed;
-    }
-
-    public void cross() {
-        this.crossed = true;
-    }
-
-    public int getRowId() {
-        return rowId;
-    }
-
-    public int getColumnId() {
-        return columnId;
     }
 }

@@ -1,7 +1,7 @@
 package com.game.tambola;
 
 public class ClaimValidator {
-    public void validateClaim(Player player, ClaimType claimType) {
+    public static void validateClaim(Player player, ClaimType claimType) {
         Ticket ticket = player.getTicket();
 
         boolean isClaimValid;

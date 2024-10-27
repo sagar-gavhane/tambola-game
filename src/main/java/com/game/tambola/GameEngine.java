@@ -6,7 +6,6 @@ import java.util.List;
 
 public class GameEngine {
     private final List<Player> players = new ArrayList<>();
-    private final ClaimValidator claimValidator = new ClaimValidator();
 
     public List<Player> getPlayers() {
         return players;
@@ -23,7 +22,7 @@ public class GameEngine {
     public void validateClaims() {
         players.forEach(player -> {
             for (ClaimType claimType : ClaimType.values()) {
-                claimValidator.validateClaim(player, claimType);
+                ClaimValidator.validateClaim(player, claimType);
             }
         });
     }

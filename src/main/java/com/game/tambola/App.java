@@ -36,13 +36,13 @@ public class App {
         Collections.shuffle(allNumbers);
 
         for (int announcedNumber : allNumbers) {
-            System.out.print(announcedNumber + "\t");
+            System.out.println("Announced number:" + announcedNumber);
             gameEngine.crossNumber(announcedNumber);
+            gameEngine.validateClaims();
+            System.out.println("");
         }
 
         System.out.println("\n🎰Starting claims...");
-
-        gameEngine.validateClaims();
 
         gameEngine.result();
     }

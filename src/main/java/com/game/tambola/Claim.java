@@ -1,7 +1,12 @@
 package com.game.tambola;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
 import java.time.LocalDateTime;
 
+@Data
+@AllArgsConstructor
 public class Claim {
     private final ClaimType claimType;
     private final LocalDateTime timeOfClaim;
@@ -19,14 +24,6 @@ public class Claim {
         this.player = player;
         this.claimType = claimType;
         this.timeOfClaim = LocalDateTime.now();
-    }
-
-    public ClaimType getClaimType() {
-        return claimType;
-    }
-
-    public LocalDateTime getTimeOfClaim() {
-        return timeOfClaim;
     }
 
     public void print() {

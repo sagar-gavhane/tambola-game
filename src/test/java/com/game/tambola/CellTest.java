@@ -78,7 +78,7 @@ class CellTest {
             Cell cell = new Cell(DEFAULT_VALUE, DEFAULT_ROW, DEFAULT_COLUMN);
             assertFalse(cell.isCrossed());
 
-            cell.cross();
+            cell.setCrossed(true);
             assertTrue(cell.isCrossed());
         }
     }

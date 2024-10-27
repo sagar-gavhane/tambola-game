@@ -19,7 +19,8 @@ public class Ticket {
     private void initializeCells() {
         for (int row = 0; row < 3; row++) {
             for (int column = 0; column < 9; column++) {
-                cells[row][column] = new Cell(null, -1, -1);
+                Cell cell = Cell.builder().value(null).rowId(-1).columnId(-1).build();
+                cells[row][column] = cell;
             }
         }
     }
@@ -34,7 +35,8 @@ public class Ticket {
 
                 if (!filledColumns.contains(column)) {
                     int drawnNumber = drawNumberForColumn(column);
-                    cells[row][column] = new Cell(drawnNumber, row, column);
+                    Cell cell = Cell.builder().value(drawnNumber).rowId(row).columnId(column).build();
+                    cells[row][column] = cell;
                     map.put(drawnNumber, cells[row][column]);
                     filledColumns.add(column);
                     counter++;
@@ -54,7 +56,7 @@ public class Ticket {
 
         if (cell != null && !cell.isCrossed()) {
             updateCounters(cell);
-            cell.cross();
+            cell.setCrossed(true);
             crossedCounter++;
         }
     }
